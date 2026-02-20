@@ -110,4 +110,4 @@ $ ros2 launch turtlebot3_bringup robot.launch.py
 $ export TURTLEBOT3_MODEL=burger  
 $ ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=$HOME/mymap.yaml  
 **Before the navigation, we need to estimate initial pose, and use keyboard to precisely locate the robot on the map.**  
-**After estimation 2D, we could set navigation goal to make the TurtleBot start moving to the destination immediately.**
+**After estimation 2D, we could set navigation goal to make the TurtleBot start moving to the destination immediately.**  
