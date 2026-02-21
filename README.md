@@ -15,7 +15,12 @@ $ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 $ git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3.git  
 $ sudo apt install python3-colcon-common-extensions  
 $ cd ~/turtlebot3_ws  
-$ colcon build --symlink-install  
+$ sudo fallocate -l 2G /swapfile  
+$ sudo chmod 600 /swapfile  
+$ sudo mkswap /swapfile  
+$ sudo swapon /swapfile  
+$ echo '/swapfile none swap se 00' | sudo tee -a /etc/fstab/swapfile none swap sw 00  
+$ colcon build --symlink-install --parallel-workers 1  
 $ echo 'source ~/turtlebot3_ws/install/setup.bash' >> ~/.bashrc  
 $ source ~/.bashrc  
 ### Environment Configuration
